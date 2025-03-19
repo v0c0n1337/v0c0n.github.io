@@ -1,0 +1,281 @@
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>V0C0N1337 | Void Master</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #c0c0c0;
+            font-family: 'Roboto Mono', monospace;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            background: linear-gradient(145deg, #111 0%, #0d0d0d 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(128, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: glitchText 5s infinite;
+        }
+
+        .username {
+            font-size: 3rem;
+            color: #800000;
+            text-shadow: 
+                2px 2px #ff0000,
+                -2px -2px #00ff00;
+            margin-bottom: 1rem;
+        }
+
+        .social-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .social-card {
+            background: rgba(20, 20, 20, 0.8);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .social-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: #800000;
+            box-shadow: 0 0 20px rgba(128, 0, 0, 0.3);
+        }
+
+        .social-card::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
+            background: linear-gradient(45deg, transparent, rgba(128, 0, 0, 0.1), transparent);
+            transition: all 0.5s ease;
+        }
+
+        .social-card:hover::before {
+            top: 100%;
+            left: 100%;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #c0c0c0;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #800000;
+            color: #fff;
+        }
+
+        .status-text {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            color: #800000;
+            font-style: italic;
+            animation: fadeInOut 2s infinite;
+        }
+
+        @keyframes glitchText {
+            0% { transform: skew(0deg); }
+            20% { transform: skew(10deg); }
+            21% { transform: skew(-10deg); }
+            23% { transform: skew(0deg); }
+            100% { transform: skew(0deg); }
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0.3; }
+            50% { opacity: 1; }
+            100% { opacity: 0.3; }
+        }
+
+        .glitch-effect {
+            position: relative;
+            animation: glitch 3s infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: none; }
+            20% { text-shadow: 2px 2px #ff0000, -2px -2px #00ff00; }
+            21% { text-shadow: none; }
+            100% { text-shadow: none; }
+        }
+
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.1;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <canvas class="matrix-bg"></canvas>
+    <div class="container">
+        <div class="header">
+            <h1 class="username glitch-effect">V0C0N1337</h1>
+            <p>// nene hoplatan// dehset sikici // baldiz domaltan //</p>
+        </div>
+
+        <div class="social-container">
+            <!-- Discord -->
+            <div class="social-card">
+                <a href="https://discord.gg/purna" class="social-link">
+                    <div class="social-icon">🎮</div>
+                    <div class="social-info">
+                        <h3>Discord</h3>
+                        <p>V0C0N#1337</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- YouTube -->
+            <div class="social-card">
+                <a href="https://youtube.com/@V0C0N0" class="social-link">
+                    <div class="social-icon">🎥</div>
+                    <div class="social-info">
+                        <h3>YouTube</h3>
+                        <p>@V0C0N</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Instagram -->
+            <div class="social-card">
+                <a href="https://www.flamingtext.com/logo/Design-Harry-Potter/Mustafa?fontname=bizarre" class="social-link">
+                    <div class="social-icon">📸</div>
+                    <div class="social-info">
+                        <h3>Instagram</h3>
+                        <p>@v0c0n.dev</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Twitter -->
+            <div class="social-card">
+                <a href="discord.gg/discord.com" class="social-link">
+                    <div class="social-icon">🐦</div>
+                    <div class="social-info">
+                        <h3>Twitter</h3>
+                        <p>@V0C0N1337</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <p class="status-text">system.void.execute()</p>
+    </div>
+
+    <script>
+        // Matrix rain effect
+        const canvas = document.querySelector('.matrix-bg');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const chars = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン0123456789';
+        const charArray = chars.split('');
+        const fontSize = 14;
+        const columns = canvas.width/fontSize;
+        const drops = [];
+
+        for(let x = 0; x < columns; x++) {
+            drops[x] = 1; 
+        }
+
+        function draw() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#800000';
+            ctx.font = fontSize + 'px monospace';
+
+            for(let i = 0; i < drops.length; i++) {
+                const text = charArray[Math.floor(Math.random()*charArray.length)];
+                ctx.fillText(text, i*fontSize, drops[i]*fontSize);
+
+                if(drops[i]*fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 33);
+
+        // Hover sound effect
+        const cards = document.querySelectorAll('.social-card');
+        const glitchSound = new Audio('data:audio/wav;base64,UklGRnQGAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YU8GAACBhYqFbF1fdH2JmK3M3uDcyq2TY1ZqbG9yeoOTs9Xs//HgyLWrq6GOhYuFhoOCgoOEhISDg4KCgoKDg4SEg4OCgoKCg4OEhISEhISDg4ODg4SEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhISDg4ODhISEhISEhISEg4ODg4SEhISEhISEhIQ=');
+
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                glitchSound.currentTime = 0;
+                glitchSound.play();
+            });
+        });
+
+        // Random status messages
+        const statusMessages = [
+            "DEHSET PURNO",
+            "i will touch you",
+            "sex",
+            "esex?",
+            "im best turkish roblox hacker"
+        ];
+
+        setInterval(() => {
+            const statusText = document.querySelector('.status-text');
+            statusText.textContent = statusMessages[Math.floor(Math.random() * statusMessages.length)];
+        }, 3000);
+    </script>
+</body>
+      </html>
+  
